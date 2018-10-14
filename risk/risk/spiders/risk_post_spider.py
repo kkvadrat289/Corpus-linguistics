@@ -15,7 +15,7 @@ class FullPostSpider(CrawlSpider):
     rules = (
         Rule(LinkExtractor(allow=('/blog\?Topic_page*', )), callback='parse_summary', follow=False),
     )
-
+    
     def parse(self, response):
         for href in response.css('div.header h2 a::attr(href)').extract():
             next_page = response.urljoin(href)
@@ -23,7 +23,7 @@ class FullPostSpider(CrawlSpider):
             
         next_page = response.css('li.next a::attr(href)').extract_first()
        
-        if next_page is not None and int(next_page.split('=')[-1]) < 2:
+        if next_page is not None:
             next_page = response.urljoin(next_page)
             yield scrapy.Request(next_page, callback=self.parse)
     

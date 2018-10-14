@@ -37,6 +37,6 @@ class RiskSpider(CrawlSpider):
             yield item   
         next_page = response.css('li.next a::attr(href)').extract_first()
        
-        if next_page is not None and int(next_page.split('=')[-1]) < 10:
+        if next_page is not None: #and int(next_page.split('=')[-1]) < 1000:
             next_page = response.urljoin(next_page)
             yield scrapy.Request(next_page, callback=self.parse_summary)
