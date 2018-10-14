@@ -1,4 +1,4 @@
-# Corpus-linguistics
+# Risk corpus
 Корпус статей на тему альпинизма и горного туризма
 
 Источник: Risk.ru 
