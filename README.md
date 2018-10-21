@@ -36,6 +36,8 @@ python + nltk + russian language support (https://github.com/Mottl/ru_punkt)
 
 #### Токенизация
 python + nltk
+
+Хранение: пока всё сложно. 
     
 ## Подробнее о тегах
 
