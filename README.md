@@ -31,6 +31,9 @@
 ## Разметка корпуса
 #### Сегментация
 python + nltk + russian language support (https://github.com/Mottl/ru_punkt)
+
+Храниение: sentence.csv - каждому посту сопоставлен набор координат предложений
+
 #### Токенизация
 python + nltk
     
